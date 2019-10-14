@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/docs.theme.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+
+    <script src="assets/vendors/jquery.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top myNav">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">
+                <img src="Images/logo_color_1250792456.png" class="logo-img">
+            </a>
+            <div class="ml-auto">
+                <ul class="navbar-nav scroll">
+                    <li><a href="#home" class="nav-link">Home</a> </li>
+                    <li><a href="#service" class="nav-link">Service</a> </li>
+                    <li><a href="#about" class="nav-link">About</a> </li>
+                    <li><a href="#demos" class="nav-link">Contract</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banner" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner-text text-right">
+                        <h2 class="display-4">
+                            I am a <span class="text-warning">Professional</span><br>
+                            <span>Web <span class="text-warning">Developer
+                            </span>
+                            </span>
+                        </h2>
+                        <button class="btn btn-lg btn-outline-primary rounded-pill">Hire me</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="Images/thumbs-up-png.png" class="banner-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services" id="service">
+        <div class="container">
+            <h2 class="text-center pt-5"><u class="pt-1">Service</u></h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fab fa-5x fa-html5 text-warning"></i>
+                    <p class="text-justify text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aut cupiditate doloremque dolores ducimus eius eligendi
+                        eveniet, incidunt labore laboriosam magnam maiores minima
+                        nesciunt odio officia, perferendis quae ratione sapiente.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-5x fa-js text-danger"></i>
+                    <p class="text-justify text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aut cupiditate doloremque dolores ducimus eius eligendi
+                        eveniet, incidunt labore laboriosam magnam maiores minima
+                        nesciunt odio officia, perferendis quae ratione sapiente.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-5x fa-css3-alt text-primary"></i>
+                    <p class="text-justify text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aut cupiditate doloremque dolores ducimus eius eligendi
+                        eveniet, incidunt labore laboriosam magnam maiores minima
+                        nesciunt odio officia, perferendis quae ratione sapiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects" id="demos">
+        <div class="container">
+            <h2 class="text-center pt-5 text-white"><u class="pt-1">Project</u></h2>
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="owl-carousel owl-theme">
+                        <div>
+                           <img src="Images/Banner-Offshorewindpark-1920x1085.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/istockphoto-482858783-612x612.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img3.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img2.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img1.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img5.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img4.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img6.jpg" class="sliderImg">
+                        </div>
+                       <div>
+                           <img src="Images/img7.jpg" class="sliderImg">
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            var owl = $('.owl-carousel');
+                            owl.owlCarousel({
+                                items: 4,
+                                loop: true,
+                                margin: 10,
+                                autoplay: true,
+                                autoplayTimeout: 2000,
+                                autoplayHoverPause: true
+                            });
+                            $('.play').on('click', function() {
+                                owl.trigger('play.owl.autoplay', [1000])
+                            })
+                            $('.stop').on('click', function() {
+                                owl.trigger('stop.owl.autoplay')
+                            })
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <p class="load text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aliquid consectetur culpa cupiditate eius error illo ipsum,
+                            itaque molestias necessitatibus nihil nisi quas ratione
+                            repellat sed suscipit? Accusantium ad esse unde! Lorem
+                            ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aliquid consectetur culpa cupiditate eius error illo ipsum,
+                            itaque molestias necessitatibus nihil nisi quas ratione
+                            repellat sed suscipit? Accusantium ad esse unde!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-Img">
+                        <img src="Images/Banner-Offshorewindpark-1920x1085.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-Img">
+                        <img src="Images/Banner-Offshorewindpark-1920x1085.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <p class="load text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aliquid consectetur culpa cupiditate eius error illo ipsum,
+                            itaque molestias necessitatibus nihil nisi quas ratione
+                            repellat sed suscipit? Accusantium ad esse unde! Lorem
+                            ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aliquid consectetur culpa cupiditate eius error illo ipsum,
+                            itaque molestias necessitatibus nihil nisi quas ratione
+                            repellat sed suscipit? Accusantium ad esse unde!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.js"></script>
+    <script src="assets/vendors/highlight.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script>
+        $('.scroll a').click(function () {
+            var href = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(href).offset().top
+            }, 800)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .my-div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+        img{
+            width: 600px;
+            height: 400px;
+        }
+        #slideShow{
+            width: 670px;
+            height: 420px;
+            margin: 240px;
+            padding: 10px;
+            position: relative;
+            box-shadow: 0 0 20px gray;
+        }
+        #slideShow div{
+            position: absolute;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="ml-5">
+        <div class="my-div"></div>
+        <hr>
+        <button class="btn btn-dark" id="btn">Click</button>
+        <button class="btn btn-dark" id="btn2">Show</button>
+        <button class="btn btn-dark" id="btn3">Toggle</button>
+    </div>
+    <div id="slideShow">
+        <div>
+            <img src="Images/img1.jpg">
+        </div>
+        <div>
+            <img src="Images/img2.jpg">
+        </div>
+        <div>
+            <img src="Images/img3.jpg">
+        </div>
+    </div>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/DivScript.js"></script>
+</body>
+</html>

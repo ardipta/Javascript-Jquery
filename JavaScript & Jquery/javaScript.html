@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1 id="head1">jknsdfj</h1>
+    <script>
+        document.write("Hello World")
+        //alert("Hello form alert")
+        console.log("Test")
+        document.getElementById('head1').innerText = "Hello From Script";
+        //var
+        //let
+        //const
+        document.write("<br>")
+        var firstName = "Sakib";
+        var lastName = "Khan";
+        document.write(firstName)
+        document.write(firstName+" "+lastName)
+
+        document.write("<br>")
+        var x = 10;
+        var y = 5;
+
+        document.write(x+y) //15
+        document.write("<br>")
+        document.write(++x) //11
+        document.write("<br>")
+        document.write(x++) //11(11+1)
+        document.write("<br>")
+        document.write(++x) //1+12(13)
+        document.write("<br>")
+        document.write(x--) //13
+        document.write("<br>")
+        document.write(--x) //13
+
+        document.write("<br>")
+        var x = 30;
+        var y = 20;
+        var z = 40;
+
+        document.write(x+=y) //x=x+y
+        document.write("<br>")
+        document.write(y-=x) //y=y-x
+        document.write("<br>")
+        document.write(z*=y) // z=z*y
+        document.write("<br>")
+
+       /* var x =20;
+        var y = 10;
+        vay z = 30;
+
+        document.write(x>y);
+        document.write("<br>");
+        document.write(x==y);
+        document.write("<br>");
+        document.write((x==y) && (z<=y));
+        document.write("<br>");
+        document.write((x==y) || (z<=y));*/
+
+       document.write("<br>")
+       var x=10;
+       var y = 20;
+
+       /*if(x<0){
+           document.write(x+" is correct");
+       }
+       else if(x>y){
+           document.write(y+ " is wrong")
+       }
+       else {
+           document.write(x+ " is not correct");
+       }*/
+        document.write("<br>")
+        var x=10;
+        var y = 20;
+
+        switch (x) {
+            case 1:{
+                document.write("This is one");
+                break;
+            }
+            case 5:{
+                document.write("This is five");
+                break;
+            }
+            case 10:{
+                document.write("This is ten");
+                break;
+            }
+            case 15:{
+                document.write("This is fifteen");
+                break;
+            }
+            default:{
+                document.write("Not found");
+            }
+        }
+
+        document.write("<br>")
+        var x=10;
+        var y = 20;
+
+        switch (x) {
+            case 1:{
+                document.write("This is one");
+                break;
+            }
+            case 5:{
+                document.write("This is five");
+                break;
+            }
+            case 10:{
+                document.write("This is ten");
+                break;
+            }
+            case 15:{
+                document.write("This is fifteen");
+                break;
+            }
+            default:{
+                document.write("Not found");
+            }
+        }
+
+       /* document.write("<br>")
+        var age = prompt("How old are you?")
+        document.write("You are "+age+ " Years old.")
+        var del = confirm("Are you sure to delete data?")
+        document.write(del)
+        document.write("<br>")*/
+
+        /*for(initialization; condition; increment){
+
+        }*/
+       /* document.write("<br>")
+        for(x=1; x<=10; x++){
+            document.write(x+"<br>");
+        }
+        document.write("<br>")
+        var x = 1;
+        while (x <= 10){
+            document.write(x+"<br>");
+            x++;
+        }
+        /!*document.write("<br>")
+        var x = 1;
+        do{
+            document.write(x+"<br>")
+            x++
+        } while (x<10)*!/*/
+        document.write("<br>")
+
+        /*var array = [];
+        array[20] = 10;
+        array[30] = 20;
+        array[40] = 30;
+        var data = [10, 20, 30, 40, 50, "sakib", "Dhaka"];
+        document.write(data[2]+" "+data[5]);*/
+        var data = [10, 20, 30, 40, 50, "sakib", "Dhaka"];
+        for (var array in data){
+            document.write(data[array]+"<br>")
+        }
+
+        function f() {
+            document.write("Hello");
+        }
+
+        function test(firstName, lastName) {
+            var firstName = "Sakib";
+            var firstName = "Khan";
+
+            var fullName = firstName+ " "+lastName;
+            document.write(fullName)
+        }
+        test();
+        document.write("<br>");
+        test("Rashid", "Khan");
+        document.write("<br>");
+        test("Mushfiq", "Rahim");
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" id="firstName"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="lastName"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" id="btn" value="Submit"></td>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td><h4 id="fullName"></h4></td>
+            <td><input type="text" id="fullName1"></td>
+        </tr>
+    </table>
+
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var firstNameValue = document.getElementById('firstName').value;
+            var lastNameValue = document.getElementById('lastName').value;
+
+            var fullName = firstNameValue+ " " +lastNameValue;
+            document.getElementById('fullName').innerHTML = fullName;
+            document.getElementById('fullName1').value = fullName;
+        }
+    </script>
+
+</body>
+</html>

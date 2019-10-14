@@ -1,0 +1,47 @@
+<html>
+	<body>
+	<input type="checkbox" name="check" value="1"/>C1</br>
+	<input type="checkbox" name="check" value="2"/>C2</br>
+	<input type="checkbox" name="check" value="3"/>C3</br>
+	<input type="button" onclick="multipleCheckbox()" value="click"/>
+	<h4>Do you want to enter email address</br></h4>
+    <input type="checkbox" onclick="enableDisable()" id="agree"/>Yes</br>
+    <h4>Email:</br></h4>
+    <input type="email" id="email" onchange="hideshow();" disabled="true"/></br>
+	<input type="checkbox" onclick="addFile()" id="agree1"/>Yes</br>
+    <span id="fileInputField"></span>
+	
+    
+
+	<script type="text/javascript">
+    console.log("Test")
+    var enableDisable = function(){
+        if(document.getElementById('agree').checked && document.getElementById('email').disabled){
+            document.getElementById('email').disabled=false;
+        }
+        else{
+            document.getElementById('email').disabled=true;
+			document.getElementById('email').value="";
+        }
+    }
+
+    function addFile(){
+        if(document.getElementById('agree1').checked){
+            document.getElementById('fileInputField').innerHTML = '<input type="file"/>';
+        }else{
+            document.getElementById('fileInputField').innerHTML = "";
+        }
+    }
+	function multipleCheckbox(){
+		var value = document.getElementsByName("check");
+		
+		for(var i=0; i<value.length; i++){
+			if(value[i].checked){
+			console.log(value[i].value); 
+			}
+		}
+		
+	}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            background-color: lightgreen;
+        }
+    </style>
+    <h4>Scholarship/Waiver Calculator</h4>
+</head>
+<body>
+    <label><b>Select Your Campus</b></label><br>
+    <select style="height: 30px; width: 700px" id="campus" onclick="scholarshipCal()">
+        <option>Main Campus</option>
+        <option>Permanent Campus</option>
+        <option>Uttara Campus</option>
+    </select><br><br>
+    <label><b>Enter SGPA</b></label><br>
+    <input type="number" id="sgpa" placeholder="SGPA of last semester" required style="width: 696px; height: 23px"><br><br>
+    <label>Do you want to know how much do you need to pay?</label><br>
+    <input type="checkbox" id="pay" onclick="enableDisable()">Yes<br><br>
+    <label><b>Enter total amount shown on student portal</b></label><br>
+    <input type="number" id="amount" placeholder="Enter the amount" required style="width: 696px; height: 23px" disabled="true"><br><br>
+    <label>Do you have previous scholarship on your H.Sc result?</label><br>
+    <input type="radio" name = "Scholarship" onclick="scholarship()" id="yesSch">Yes<br>
+    <input type="radio" name = "Scholarship" onclick="scholarship()" id="noSch">No<br><br>
+    <label><b>If yes then how much?(In percentage)</b></label><br>
+    <input type="number" id="percentage" placeholder="Enter the percentage" required style="width: 696px; height: 23px" disabled="true"><br><br>
+    <input type="button" onclick="scholarshipCal()" id="schCal" value="Calculate the Scholarship" style="background-color: gray; color: white; height: 20px" >
+    <input type="button" id="AmountCal" value="Calculate the Amount" style="background-color: gray; color: white; height: 20px">
+
+    <script type="text/javascript">
+        function enableDisable(){
+            if(document.getElementById('pay').checked && document.getElementById('amount').disabled){
+                document.getElementById('amount').disabled = false;
+            }
+            else{
+                document.getElementById('amount').disabled = true;
+                document.getElementById('amount').value = "";
+            }
+        }
+        function scholarship() {
+            if(document.getElementById('yesSch').checked && document.getElementById('percentage').disabled){
+                document.getElementById('percentage').disabled = false;
+            }
+            else if(document.getElementById('noSch').checked){
+                document.getElementById('percentage').disabled = true;
+                document.getElementById('percentage').value = "";
+            }
+        }
+        function scholarshipCal() {
+            if(document.getElementById('campus').value == "Permanent Campus"){
+                var waiver = 0.05;
+                console.log(document.getElementById('amount').value);
+
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

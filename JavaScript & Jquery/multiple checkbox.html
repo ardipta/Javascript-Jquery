@@ -1,0 +1,22 @@
+<html>
+	<body>
+	<input type="checkbox" onclick="addFile()" id="agree1"/>Yes</br>
+    <span id="fileInputField"></span>
+	<input type="checkbox" name="check"/>C1</br>
+	<input type="checkbox" name="check"/>C2</br>
+	<input type="checkbox" name="check"/>C3</br>
+	<input type="button" value="see" onclick="multipleCheckbox()"
+	<script type="text/javascript">
+	function multipleCheckbox(){
+		var value = document.getElementsByName("check").value;
+		
+		for(i=0; i<value.length; i++){
+			if(value[i].checked){
+			value=value[i];
+			}
+		}
+		console.log(value); 
+	}
+	</script>
+	</body>
+</html>
